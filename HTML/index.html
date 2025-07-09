@@ -24,7 +24,46 @@
     Olá Mundo
 </p>
 
+<hr>
+
 <!--A tag "a" é usada como "âncora" para se colocar atributos como por exemplo o "href" que é utilizado para links. Quando um usuário clica no texto ou no elemento contido na tag, o navegador o levará ao endereço especificado no "href".-->
-<a href="https://jpimg.com.br/uploads/2024/12/7-racas-de-gato-com-filhotes-muito-fofos.jpg" title="Gatinho cinza, clique!">Gatinho cinza</a>
+<a href="https://jpimg.com.br/uploads/2024/12/7-racas-de-gato-com-filhotes-muito-fofos.jpg" title="Gatinho cinza, clique!" target="_blank">Gatinho cinza</a>
+
+<!--Mais alguns atributos que são utilizados na tag "a":
+
+Para links internos: É possivel criar links internos para mesma página apartir do atributo "id".-->
+
+<p id="secao-contato">Entre em Contato</p>
+<p><a href="#secao-contato">Ir para Seção de Contato</a></p>
+
+<!--Para Download de arquivos: Com o atributo "download", o navegador identifica que é para baixar o arquivo de vez o abri-lo.-->
+
+<a href="documento.pdf" download>Baixar PDF</a>
+
+<br><!--A tag "br" é auto-fechável ela não precisa da tag de fechamento com ela. Ela serve para realizar uma quebra de linha-->
+
+<!--"target": É o atributo que determina em qual página o link será aberto.-->
+
+<a href="https://lojapetmais.com.br/cdn/shop/articles/brinquedosgato.png?v=1714668761" target="_blank" title="Gatinho brincando com a bola!">Gatinho com a Bola</a>
+
+<br>
+
+<!--"rel": Esse atributo é utilizado para descrever a relação da página com o link. os valores são "nofollow"(para não seguir o link), "noopener" e "noreferrer" almentam a segurança ao abrir links em uma nova aba/janela-->
+
+<a href="https://fly.metroimg.com/upload/q_85,w_1200/https://uploads.metroimg.com/wp-content/uploads/2022/12/08154034/Gato-com-as-patas-levantadas.jpg" rel="nofollow noopener noreferrer" target="_blank">Gatinho</a>
+
+<br>
+
+<!--links para e-mail, telefone e SMS-->
+
+<a href="nayaraabe02@gmail.com">Envie um e-mail</a><!--E-mail-->
+
+<br>
+
+<a href="tel:+5511930263687">Ligue para nós</a><!--Telefone-->
+
+<br>
+
+<a href="sms:+5511930263687?body=Olá">Enviar SMS</a><!--SMS-->
 </body>
 </html>
