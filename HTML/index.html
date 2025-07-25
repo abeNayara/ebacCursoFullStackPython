@@ -10,11 +10,11 @@
 <body>
 <!--A primeira tag que será apresentada é a de títulos, elas são representadas pela letra "h" seguida de um número(vão de 1 a 6), o número representará o nível hierárquico(importância) do título dentro do conteúdo de uma página-->
 <h1>Título h1</h1>
-    <h2>Título h2</h2>
-        <h3>Título h3</h3>
-            <h4>Título h4</h4>
-                <h5>Título h5</h5>
-                    <h6>Título h6</h6>
+<h2>Título h2</h2>
+<h3>Título h3</h3>
+<h4>Título h4</h4>
+<h5>Título h5</h5>
+<h6>Título h6</h6>
 <!--Aqui temos todos os títulos que podemos inserir no HTML-->
 
 <hr><!--A tag "hr" serve como uma quebra de linha temática, fazendo uma linha na horizontal, assim separando o conteúdo-->
@@ -56,7 +56,7 @@ Para links internos: É possivel criar links internos para mesma página apartir
 
 <!--links para e-mail, telefone e SMS-->
 
-<a href="nayaraabe02@gmail.com">Envie um e-mail</a><!--E-mail-->
+<a href="mailto:nayaraabe02@gmail.com">Envie um e-mail</a><!--E-mail-->
 
 <br>
 
@@ -65,5 +65,111 @@ Para links internos: É possivel criar links internos para mesma página apartir
 <br>
 
 <a href="sms:+5511930263687?body=Olá">Enviar SMS</a><!--SMS-->
+
+<br>
+<hr>
+
+<!--Bom, agora iremos ver as tags semânticas:-->
+<!--Primeiramente temos a tag "b" que deixa uma palavra ou frase em negrito para fins somente vizuais-->
+
+<p>Tenho dois gatos <b>lindos</b></p>
+
+<!--E também temos a tag "strong" que tem como objetivo deixar o que estiver entre as tags de abertura e fechamento em negrito, porém com o intuito de ser importante. Ou seja, possuir contexto-->
+
+<p>Tenho dois gatos <strong>muito lindos</strong></p>
+
+<!--Esta tag impacta diretamente no SEO(mecânismo de busca) e na acessibilidade da página-->
+
+<!--Para tag "i" segue o mesmo padrão, sendo somente para meios vizuais-->
+
+<br>
+
+<p>Ganhei um <i>perfume</i></p>
+
+<!--Agora para tag "em", ela deixará a frase em itálico com o objetivo de dar enfase na palavra ou frase-->
+
+<p>Ganhei um <em>perfume caro</em></p>
+
+<!--Obs: Para boas práticas é sempre bom utilizar somente as tags "strong" e "em" para uso semântico, já que as tags "b" e "i" são para efeitos visuais. Então recomendo que seja utilizado conforme normas do CSS, que foi criado para este uso afinal.-->
+
+<br>
+
+<!--A tag "mark" serve como uma marcação, como um marca-texto grifando as palavras. Ela sinalizado elementos que tem relevância imediata, como em campo de pesquisa, atualização de conteudo, citações, entre outras-->
+
+<p>Você pesquisou por <mark>sapatos</mark> nesta última semana</p>
+
+<br>
+
+<!--E também temos a tag "del" que risca a palavra deixando ela rasurada, assim tornando o conteudo inválido ou representado que foi alterado-->
+
+<p>Para quem perguntou, estamos demitindo <del>todos</del> os funcionários</p>
+
+<!--Dentro da tag "del" podemos utilizar alguns atributos como o "cite" e o "datetime". O "cite" realiza uma citação no que foi rasurado, colocando uma URL(não clicavel) para que seja visto o porque do coteudo ter sido auterado ou deletado, comumente utilizado para mudar preços em promoções, auterações em documentos/artigos, itens que estão indisponiveis.-->
+
+<p>
+  Este animal não é um <del cite="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/01-domesticated-dog.webp?w=760&h=507">Gato</del>, pois este é um cachorro!
+</p>
+
+<!--Já o "datetime" indica a data/ hora que a tag "del" foi utilizada. Este atributo também serve para as tags "time" e "ins".-->
+
+<p>Para o arquivo <del datetime="2025-07-18T12:23:00">182</del> não estamos correspondendo.</p>
+
+<hr>
+
+<!--Falando das outras duas tags. A tag "time" é usada para representar o conteudo de data e hora sendo legivél por máquinas e humanos. Sendo de importância para que navegadores, ferramentas de busca ou outras aplicações possam entender e padronizar a data e hora de forma padronizada.-->
+
+<P> Você possui um evento no dia <time datetime="2025-07-20">20 de julho</time>.</P>
+
+<!--Agora a tag "ins" ele insere um texto, servindo principalmete para atualizações.-->
+
+<p>Preço: R$<del datetime="2025-07-18">199,00</del> para R$<ins datetime="2025-07-19">99,00</ins></p>
+
+<hr>
+
+<!--Temos também a tag "small" que serve para deixar a fonte do texto menor, esta tag pode representar direitos autorais, avisos legais, letras pequenas, notas de rodapé, ou atribuições.-->
+
+<p>Menor, menor, MENOR, <small>menor</small>.</p>
+
+<hr>
+
+<!--A tag "span" serve como um coutainer vazio para se estilizar com CSS e manupilar com JavaScript, sua utilização serve para elementos inline(que estão somente em uma linha)-->
+
+<p>O ar é feito de uma molécula de <span style="color: aqua;">Hidrogênio</span> e  duas de <span style="color: grey;">Oxigênio</span>.</p>
+
+<hr>
+
+<!--Obs: Porque não usar "div"? para boas praticas sempre é bom utilizar a tag "span" para elementos inline, pois corresponde ao bom uso do HTML. As "div" são utilizadas para uma gama muito maior de conteudo, abrangendo diversas tags.-->
+
+<!--Para tag "blockquote" é onde se realiza uma citação semântica. Isso quer dizer que pode ser citado dentro da página algo que já foi escrito anteriormente, ou algo externo. Por exemplo, frases, falas, artigos, trechos de um texto, entre outros.-->
+
+<h3>Frase do dia</h3>
+<blockquote cite="https://www.google.com/search?q=frase+do+dia&rlz=1C1ONGR_pt-PTBR1168BR1168&oq=frase+do+dia&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORixAxiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIGCAUQABgDMgcIBhAAGIAEMgcIBxAAGIAEMgcICBAAGIAEMgcICRAAGIAE0gEINDYzOWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8">
+    <p>"Acredite no seu potencial e transforme desafios em oportunidades. O sucesso é a soma de pequenos esforços repetidos dia após dia."</p>
+    <footer>
+        - Representado pela: <cite>IA Gemini, <time datetime="2025-07-24">24 de Julho de 2025</time></cite>
+    </footer>
+</blockquote>
+
+<!--Podemos observar o uso de outras tags e atributos dentro do uso da tag "blockquote". A tag "footer" é utilizada para realizar uma mensão ao qua foi citadado, nome do autor, fonte, título da obra. E a tag "time" serve para datar corretamente a citação original, e o atibuto "datetime" serve para ser legivel a máquinas.-->
+
+<hr>
+
+<!--Tag "adress" indica a representação de informações de contato. Como, nome do autor/ proprietário, endereço físico, endereço de e-mail, número de telefone e links. Normalmente sempre aparece dentro da tag "footer" por ser o "pé" da página.-->
+
+<footer>
+    <address>
+        Escrito por: <a href="mailto:nayaraabe02@gmail.com">Nayara Abe</a>
+        <br>
+        Visite-me em: <a href="https://github.com/abeNayara">Meu perfil no GitHub</a>
+        <br>
+        Rua ---, 123 - Cidade, Estado
+        <br>
+        CEP: 12345-678
+        <br>
+        Telefone: <a href="tel:+55 11 1234-5678">(XX) XXXX-XXXX</a>
+    </address>
+    <p>&copy; 2025 Meu Primeiro Site. Todos os direitos reservados.</p>
+</footer>
+
 </body>
 </html>
