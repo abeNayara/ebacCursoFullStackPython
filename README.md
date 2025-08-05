@@ -9,70 +9,236 @@ Acesse através deste link: [Clique aqui!](https://ebaconline.com.br/sale/referr
 
 ***
 
-### Olá, tudo bem?
-Aqui vamos ver como um documento HTML é formado.
+Agora que vimos todo o corpo documental do HTML, chegou a hora de aprender um pouco sobre as tags de texto, como, paragráfos, títulos, elementos semânticos, como inserir um link na página e muito mais. 😊
+
+Para começarmos, devo lembrar que as tags apresentadas agora serão inseridas na tag `body` , que foi mencionada em um commit anterior e está escrita na Issue "Descrevendo o documento HTML".
+
+### Títulos
+
+A primeira tag que será apresentada é a de títulos, elas são representadas pela letra "*h*" seguida de um número(vão de 1 a 6), o número representará o nível hierárquico(importância) do título dentro do conteúdo de uma página.
+
+```
+<h1>Título h1</h1>
+<h2>Título h2</h2>
+<h3>Título h3</h3>
+<h4>Título h4</h4>
+<h5>Título h5</h5>
+<h6>Título h6</h6>
+```
+***
+
+### Paragráfos
+
+Para se inserir um paragráfo deve-se utilizar a tag `p`.
+
+```
+<p>
+    Olá Mundo
+</p>
+```
+
+*Obs:* Quando ainda não se tem o texto definido para página e se sente necessidade de uma visualização melhro de como ficará o documento pode ser utilizado o atributo `lorem`, ele cria um texto aleatório na página.
+
+***
+
+### Links
+
+A tag `a` é usada como "**_âncora_**" para se colocar atributos como por exemplo o `href` que é utilizado para links. Quando um usuário clica no texto ou no elemento contido na tag, o navegador o levará ao endereço especificado no `href`.
+
+```
+<a href="https://jpimg.com.br/uploads/2024/12/7-racas-de-gato-com-filhotes-muito-fofos.jpg" title="Gatinho cinza, clique!" target="_blank">Gatinho cinza</a>
+```
+
+Mais alguns atributos que são utilizados na tag `a`:
+
+  - **Para links internos: É possivel criar links internos para mesma página apartir do atributo `id`.**
+
+```
+<p id="secao-contato">Entre em Contato</p>
+<p><a href="#secao-contato">Ir para Seção de Contato</a></p>
+```
+
+  - **Para Download de arquivos: Com o atributo `download`, o navegador identifica que é para baixar o arquivo de vez o abri-lo.**
+
+```
+<a href="documento.pdf" download>Baixar PDF</a>
+```
+
+
+  - **`target`: É o atributo que determina em qual página o link será aberto.**
+
+```
+<a href="https://lojapetmais.com.br/cdn/shop/articles/brinquedosgato.png?v=1714668761" target="_blank" title="Gatinho brincando com a bola!">Gatinho com a Bola</a>
+```
+
+
+  - **`rel`: Esse atributo é utilizado para descrever a relação da página com o link. os valores são `nofollow`(para não seguir o link), `noopener` e `noreferrer` almentam a segurança ao abrir links em uma nova aba/janela.**
+
+```
+<a href="https://fly.metroimg.com/upload/q_85,w_1200/https://uploads.metroimg.com/wp-content/uploads/2022/12/08154034/Gato-com-as-patas-levantadas.jpg" rel="nofollow noopener noreferrer" target="_blank">Gatinho</a>
+```
+
+
+- **links para e-mail, telefone e SMS**
+
+```
+<a href="mailto:nayaraabe02@gmail.com">Envie um e-mail</a><!--E-mail-->
+
 <br>
-**Algumas coisas que você deve saber:**
-* HTML é uma linguagem de marcação.
-* Seu principal objetivo é a estruturação de páginas web, sendo essencial para dizer ao navegador o que cada parte do conteúdo representa: título, listas, parágrafos, links, imagens, entre outras funcionalidades.
-* A estrutura do HTML é formada por tags que normalmente possuem abertura "<" e fechamento "/>".
 
-   _Obs: algumas tags, *como "img" e "br", são auto-fecháveis e não são obrigadas a serem fechadas._
+<a href="tel:+5511930263687">Ligue para nós</a><!--Telefone-->
 
-## É assim que o HTML será apersentado:
+<br>
+
+<a href="sms:+5511930263687?body=Olá">Enviar SMS</a><!--SMS-->
+```
+***
+
+### Negrito e itálico
+
+Bom, agora iremos ver as tags semânticas:
+
+Primeiramente temos a tag `b` que deixa uma palavra ou frase em negrito para fins somente **vizuais**.
 
 ```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<p>Tenho dois gatos <b>lindos</b></p>
 ```
 
-`<!DOCTYPE html>` 
+E também temos a tag `strong` que tem como objetivo deixar o que estiver entre as tags de abertura e fechamento em negrito, porém com o intuito de ser **importante**. Ou seja, possuir contexto:
 
-Aqui se começa toda a estrutura do HTML, indicando que começaremos um documento no formato de HTML. E que ele conversará com o navegador de forma sincrona.
+```
+<p>Tenho dois gatos <strong>muito lindos</strong></p>
+```
 
-`<html lang="pt-br">`  
+*Obs:* A tag `strong` impacta diretamente no SEO(mecânismo de busca) e na acessibilidade da página.
 
-Setamos a abertura da tag do HTML e também a linguagem com o atributo *(todo elemento que receberá algum valor)* "lang", futuramente servindo assim para mecanismos de buscas(ex: google) e também para regir o texto aplicado na página.
+***
 
-`<head>`
+Para tag `i` segue o mesmo padrão, sendo somente para meios **vizuais**.
 
-Se abre esta tag para ser um "cabeçalho" do HTML contendo alguns elementos
+```
+<p>Ganhei um <i>perfume</i></p>
+```
 
-`<meta charset="UTF-8">` 
+Agora para tag `em`, ela deixará a frase em itálico com o objetivo de dar **enfase** na palavra ou frase:
 
-tag "meta" é usada para definir metadados em um documento HTML, ou seja, informações sobre os dados da página. E seu atributo "charset" é utilizado para especificar a codificação de caracteres usada no documento, assim suportando diferentes caracteres de diferentes idiomas.
+```
+<p>Ganhei um <em>perfume caro</em></p>
+```
 
-`<meta name="viewport" content="width=device-width, initial-scale=1.0">` 
+*Obs:* Para boas práticas é sempre bom utilizar somente as tags `strong` e `em` para uso semântico, já que as tags `b` e `i` são para efeitos visuais. Então recomendo que seja utilizado conforme normas do CSS, que foi criado para este uso afinal.
 
-Nesta tag "meta" se possui dois atributos, "name" que realiza o controle da página para diferentes dispositivos, definindo  no atributo posterior "content" a escala da janela para o tamanho de visualização.
+***
 
-`<title>Document</title>`
+### Marcação (Marca texto)
 
-Na tag "title" definimos o nome da página. O que ficar entre as tags de abertura e fechamento é o que será exibido no seu navegador na hora de abrir um documento web.
+A tag `mark` serve como uma **marcação**, como um marca-texto grifando as palavras. Ela sinalizado elementos que tem **relevância imediata**, como em campo de pesquisa, atualização de conteudo, citações, entre outras.
 
-`</head>`
+```
+<p>Você pesquisou por <mark>sapatos</mark> nesta última semana</p>
+```
 
-Aqui temos o fechamento da tag "head"
+***
 
-**Brevemente, está é a estrutura de documentação, onde inserimos estas tags e atributos para podermos iniciar o conteudo que será exibido na página**
+### Rasura
 
-`<body>`
+E também temos a tag `del` que risca a palavra deixando ela **rasurada**, assim tornando o conteúdo inválido ou representado que foi alterado.
 
-Na tag "body", ou seja, o corpo da página, é na onde todo o conteudo ficará. Aqui tudo o que é fundamental para o "esqueleto" do documentos estará
-    
-`</body>`
+```
+<p>Para quem perguntou, estamos demitindo <del>todos</del> os funcionários</p>
+```
 
-Fechamento da tag "body"
+Dentro da tag `del` podemos utilizar alguns atributos como o `cite` e o `datetime`. O `cite` realiza uma **citação** no que foi rasurado, colocando uma URL(não clicavel) para que seja visto o porque do coteúdo ter sido alterado ou deletado, comumente utilizado para mudar preços em promoções, alterações em documentos/artigos, itens que estão indisponíveis.-->
 
-`</html>`
+```
+<p>
+  Este animal não é um <del cite="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/01-domesticated-dog.webp?w=760&h=507">Gato</del>, pois este é um cachorro!
+</p>
+```
 
-E Fechamento do documento HTML
+Já o `datetime` indica a **data/ hora** que a tag `del` foi utilizada. Este atributo também serve para as tags `time` e `ins`.
+
+```
+<p>Para o arquivo <del datetime="2025-07-18T12:23:00">182</del> não estamos correspondendo.</p>
+```
+
+***
+### tags `time` e `ins`
+Falando das outras duas tags. A tag `time` é usada para representar o conteúdo de data e hora sendo legivél por máquinas e humanos. Sendo de importância para que navegadores, ferramentas de busca ou outras aplicações possam entender e padronizar a data e hora.
+
+```
+<P> Você possui um evento no dia <time datetime="2025-07-20">20 de julho</time>.</P>
+```
+
+Agora a tag `ins` insere um texto, servindo principalmete para **atualizações**.
+
+```
+<p>Preço: R$<del datetime="2025-07-18">199,00</del> para R$<ins datetime="2025-07-19">99,00</ins></p>
+```
+
+***
+
+### `small`
+
+Temos também a tag `small` que serve para deixar a fonte do **texto menor**, esta tag pode representar direitos autorais, avisos legais, letras pequenas, notas de rodapé, ou atribuições.
+
+```
+<p>Menor, menor, MENOR, <small>menor</small>.</p>
+```
+
+***
+
+### `span`
+
+A tag `span` serve como um **coutainer** vazio para se estilizar com CSS e manupilar com JavaScript, sua utilização serve para elementos **inline**(que estão somente em uma linha).
+
+```
+<p>O ar é feito de uma molécula de <span style="color: aqua;">Hidrogênio</span> e  duas de <span style="color: grey;">Oxigênio</span>.</p>
+```
+
+*Obs:* Porque não usar `div`? Para boas pràticas sempre é bom utilizar a tag `span` para elementos inline, pois corresponde ao bom uso do HTML. As `div` são utilizadas para uma gama muito maior de conteúdo, abrangendo diversas tags.
+
+***
+
+### `blockquote`
+
+Para tag `blockquote` é onde se realiza uma **citação semântica**. Isso quer dizer que pode ser citado dentro da página algo que já foi escrito anteriormente, ou algo externo. Por exemplo, frases, falas, artigos, trechos de um texto, entre outros.
+
+```
+<h3>Frase do dia</h3>
+<blockquote cite="https://www.google.com/search?q=frase+do+dia&rlz=1C1ONGR_pt-PTBR1168BR1168&oq=frase+do+dia&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORixAxiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIGCAUQABgDMgcIBhAAGIAEMgcIBxAAGIAEMgcICBAAGIAEMgcICRAAGIAE0gEINDYzOWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8">
+    <p>"Acredite no seu potencial e transforme desafios em oportunidades. O sucesso é a soma de pequenos esforços repetidos dia após dia."</p>
+    <footer>
+        - Representado pela: <cite>IA Gemini, <time datetime="2025-07-24">24 de Julho de 2025</time></cite>
+    </footer>
+</blockquote>
+```
+
+Podemos observar o uso de outras tags e atributos dentro do uso da tag `blockquote`. A tag `footer` é utilizada para realizar uma mensão ao qual foi citadado, nome do autor, fonte, título da obra. E a tag `time` serve para datar corretamente a citação original, e o atibuto `datetime` serve para ser legivel a máquinas.
+
+***
+
+### `adress`
+
+Tag `adress` indica a representação de informações de contato. Como, nome do autor/ proprietário, endereço físico, endereço de e-mail, número de telefone e links. Normalmente sempre aparece dentro da tag "footer" por ser o "pé" da página.
+
+
+```
+<footer>
+    <address>
+        Escrito por: <a href="mailto:nayaraabe02@gmail.com">Nayara Abe</a>
+        <br>
+        Visite-me em: <a href="https://github.com/abeNayara">Meu perfil no GitHub</a>
+        <br>
+        Rua ---, 123 - Cidade, Estado
+        <br>
+        CEP: 12345-678
+        <br>
+        Telefone: <a href="tel:+55 11 1234-5678">(XX) XXXX-XXXX</a>
+    </address>
+    <p>&copy; 2025 Meu Primeiro Site. Todos os direitos reservados.</p>
+</footer>
+```
+***
+
+Essas são as principais tags semânticas que temos no HTML de inicio, são muito importantes e util para o aprendizado, espero ter conseguido absorver conhecimento e ter deixado claro aos demais 😃
