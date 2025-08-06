@@ -6,98 +6,134 @@ Antigamente no HTML se utilizava a tag "div" para multiplos usos, ela continua s
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Containers</title>
 </head>
+
 <body>
 
-<!--Os containers servem como "caixas de agurpamento". São usados para organizar e agrupar elementos HTML, assim sendo essencial para aplicar o CSS de forma eficiente e controlada, o que permite aumentar o grau de complexidade(estetíca e de manupilação) da página.-->
+    <!--Os containers servem como "caixas de agurpamento". São usados para organizar e agrupar elementos HTML, assim sendo essencial para aplicar o CSS de forma eficiente e controlada, o que permite aumentar o grau de complexidade(estetíca e de manupilação) da página.-->
 
-<!--Tendo isso em mente, será apresentado agora alguns containers semânticos, eles se diferem da "div" por organizar melhor a paginá e suas funcionalidades-->
+    <!--Tendo isso em mente, será apresentado agora alguns containers semânticos, eles se diferem da "div" por organizar melhor a paginá e suas funcionalidades-->
 
-<!--Tag "header", este container serve como um "cabeçalho", é na onde se apresenta o conteúdo inicial da página, seus elementos principais incluem: títulos, logotipos, slogans e o elemento "nav" para navegar na página.-->
+    <!--Tag "header", este container serve como um "cabeçalho", é na onde se apresenta o conteúdo inicial da página, seus elementos principais incluem: títulos, logotipos, slogans e o elemento "nav" para navegar na página.-->
 
-<header>
-    <h1>Meu primeiro container</h1>
-    <p>Na tag "header" foi escríto meu primeiro container!!!</p>
-    <nav>
-        <ul>
-            <li><a href="#artigos">Artigos</a></li>
-            <li><a href="#sobre-nos">Sobre Nós</a></li>
-            <li><a href="#contatos">Contatos</a></li>
-            <li><a href="#nossa-hitoria">Nossa História</a></li>
-        </ul>
-    </nav>
-</header>
-
-<!--"nav" é um container de navegação, podemos utilizar ele para pesquisar itens em uma página. Pode ser usado em outros containers como "section", normalmente utiliza "ul" e "li" para criar listas para navegação mais simplificada na página.-->
-
-<!--Além de ficar dentro da tag "body" o "header" pode ser incluido dentro do container "article" ou de uma "section" para ser um cabeçalho exclusivo daquele artigo ou seção.-->
-
-<main>
-    <article>
-        <header>
-            <h2>A arte</h2>
-            <p>Tema: Arte</p>
-        </header>
-        <p>A arte engloba arquitetura, cinema, dança, desenho,      escultura, fotografia, literatura, música, pintura, poesia...</p>
-    </article>
-</main>
-
-<!--"main" tag que contém o elemento principal da página, aqui se engloba as principais tags e elementos que realizam o comportamento do documento como um todo.-->
-
-<!--"section" é um container que divide o conteúdo em seções, por exemplo, pode se ter uma section para  "artigos", outra para "sobre-nos", outra para "contatos", etc.-->
-
-<section id="artigos">
-    <h2>Últimos Artigos</h2>
-    <p>Confira os últimos artigos publicados recentemente<time datetime="2025-08-04T12:39:00"> 05/08/2025</time></p>
-
-<!--"article" este container é utilizado para conteúdos independetes, sendo o conteúdo principal para um contexto específico.-->
-
-<!--"aside" o que está diretamente relacionado ao conteudo principal, normalmente "ao lado", como uma barra lateral -->
-
-    <article>
-        <header>
-        <h3>Prissão domiciliar</h3>
-        <p>Referente à prisão domiciliar do ex-presidente Bolsonaro.</p>
+    <header>
+        <h1>Meu primeiro container</h1>
+        <p>Na tag "header" foi escríto meu primeiro container!!!</p>
+        <nav>
+            <ul>
+                <li><a href="#artigos">Artigos</a></li>
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
+                <li><a href="#contatos">Contatos</a></li>
+                <li><a href="#nossa-hitoria">Nossa História</a></li>
+            </ul>
+        </nav>
     </header>
-    <p>Carlos Bolsonaro passa mal e é internado após prisão domiciliar do pai.
-    <br>
-    Clique<a href="https://veja.abril.com.br/coluna/maquiavel/carlos-bolsonaro-passa-mal-e-e-internado-apos-prisao-domiciliar-do-pai/"> aqui</a> para saber mais!
-    </p>
-    
-    <aside>
-        <h4>Sobre Jair Bolsonaro</h4>
-        <p>Jair Messias Bolsonaro GOMM é um militar reformado e político brasileiro, atualmente filiado ao Partido Liberal.
-        <br>
-        Para saber mais sobre o ex-presidente brasileiro, acesse: <a href="https://pt.wikipedia.org/wiki/Jair_Bolsonaro">Wikipédia</a>
-        </p>
-    </aside>
-    </article>
 
-    <article>
-        <header>
-            <h3>Paleontologia</h3>
-            <p>Foi descrita uma "Formiga-infernal" fossilizada encontrada no Nordeste brasileiro.</p>
-        </header>
-        <p>Formiga-infernal que existiu no Nordeste brasileiro é a mais antiga do mundo.
-        Inseto viveu há 113 milhões de anos e tinha mandíbula vertical, diferente das atuais.
-        <br>
-        Clique<a href="https://revistapesquisa.fapesp.br/formiga-infernal-que-existiu-no-nordeste-brasileiro-e-a-mais-antiga-do-mundo/ "> aqui</a> para mais informações!</p>
-    </article>
+    <!--"nav" é um container de navegação, podemos utilizar ele para pesquisar itens em uma página. Pode ser usado em outros containers como "section", normalmente utiliza "ul" e "li" para criar listas para navegação mais simplificada na página.-->
 
-    <article>
-        <header>
-            <h3>Tecnologia</h3>
-            <p>Logística reversa de medicamentos vencidos como uma meta civilizatória para o Brasil</p>
-        </header>
-        <p>Um estudo publicado pela SciELO abordou a logistica reversa de medicamentos vencidos como uma "meta civilizatória para o Brasil"
-        <br>
-        Clique<a href="https://pressreleases.scielo.org/blog/2025/07/22/logistica-reversa-de-medicamentos-vencidos-como-uma-meta-civilizatoria-para-o-brasil/"> aqui</a> para mais!
-        </p>
-    </article>
-</section> 
+    <!--Além de ficar dentro da tag "body" o "header" pode ser incluido dentro do container "article" ou de uma "section" para ser um cabeçalho exclusivo daquele artigo ou seção.-->
+
+    <main>
+        <article>
+            <header>
+                <h2>A arte</h2>
+                <p>Tema: Arte</p>
+            </header>
+            <p>A arte engloba arquitetura, cinema, dança, desenho, escultura, fotografia, literatura, música, pintura,
+                poesia...</p>
+        </article>
+
+
+        <!--"main" tag que contém o elemento principal da página, aqui se engloba as principais tags e elementos que realizam o comportamento do documento como um todo.-->
+
+        <!--"section" é um container que divide o conteúdo em seções, por exemplo, pode se ter uma section para  "artigos", outra para "sobre-nos", outra para "contatos", etc.-->
+
+        <section id="artigos">
+            <h2>Últimos Artigos</h2>
+            <p>Confira os últimos artigos publicados recentemente<time datetime="2025-08-04T12:39:00"> 05/08/2025</time>
+            </p>
+
+            <!--"article" este container é utilizado para conteúdos independetes, sendo o conteúdo principal para um contexto específico.-->
+
+            <!--"aside" o que está diretamente relacionado ao conteudo principal, normalmente "ao lado", como uma barra lateral -->
+
+            <article>
+                <header>
+                    <h3>Prissão domiciliar</h3>
+                    <p>Referente à prisão domiciliar do ex-presidente Bolsonaro.</p>
+                </header>
+                <p>Carlos Bolsonaro passa mal e é internado após prisão domiciliar do pai.
+                    <br>
+                    Clique<a
+                        href="https://veja.abril.com.br/coluna/maquiavel/carlos-bolsonaro-passa-mal-e-e-internado-apos-prisao-domiciliar-do-pai/">
+                        aqui</a> para saber mais!
+                </p>
+
+                <aside>
+                    <h4>Sobre Jair Bolsonaro</h4>
+                    <p>Jair Messias Bolsonaro GOMM é um militar reformado e político brasileiro, atualmente filiado ao
+                        Partido Liberal.
+                        <br>
+                        Para saber mais sobre o ex-presidente brasileiro, acesse: <a
+                            href="https://pt.wikipedia.org/wiki/Jair_Bolsonaro">Wikipédia</a>
+                    </p>
+                </aside>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Paleontologia</h3>
+                    <p>Foi descrita uma "Formiga-infernal" fossilizada encontrada no Nordeste brasileiro.</p>
+                </header>
+                <p>Formiga-infernal que existiu no Nordeste brasileiro é a mais antiga do mundo.
+                    Inseto viveu há 113 milhões de anos e tinha mandíbula vertical, diferente das atuais.
+                    <br>
+                    Clique<a
+                        href="https://revistapesquisa.fapesp.br/formiga-infernal-que-existiu-no-nordeste-brasileiro-e-a-mais-antiga-do-mundo/ ">
+                        aqui</a> para mais informações!
+                </p>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Tecnologia</h3>
+                    <p>Logística reversa de medicamentos vencidos como uma meta civilizatória para o Brasil</p>
+                </header>
+                <p>Um estudo publicado pela SciELO abordou a logistica reversa de medicamentos vencidos como uma "meta
+                    civilizatória para o Brasil"
+                    <br>
+                    Clique<a
+                        href="https://pressreleases.scielo.org/blog/2025/07/22/logistica-reversa-de-medicamentos-vencidos-como-uma-meta-civilizatoria-para-o-brasil/">
+                        aqui</a> para mais!
+                </p>
+            </article>
+        </section>
+    </main>
+    <!--Obs: Na tag "aside"(ao lado) quem define de fato na onde o conteúdo será posissionado vai ser o CSS-->
+
+    <!-- "footer" é o container semântico que fica no rodapé da página indicando conteúdos, como, telefone de contato, email, endereço, autorização da página e afins.-->
+
+    <footer id="#contatos">
+        <address>
+            Escrito por: <a href="mailto:nayaraabe02@gmail.com">Nayara Abe</a>
+            <br>
+            Visite-me em: <a href="https://github.com/abeNayara">Meu perfil no GitHub</a>
+            <br>
+            Rua ---, 123 - Cidade, Estado
+            <br>
+            CEP: 12345-678
+            <br>
+            Telefone: <a href="tel:+55 11 1234-5678">(XX) XXXX-XXXX</a>
+        </address>
+        <p>&copy; 2025 Meu Primeiro Site. Todos os direitos reservados.</p>
+    </footer>
+    <!--Obs: o container "footer" não pode estar diretamente dentro da tag "main", pois ela é um container reservado par ao conteúdo principal da página. Já o "footer" pode ser encontrado dentro de "body, "nav", "section" e "article".-->
+
 </body>
+
 </html>
