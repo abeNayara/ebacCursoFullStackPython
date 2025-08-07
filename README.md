@@ -9,236 +9,124 @@ Acesse através deste link: [Clique aqui!](https://ebaconline.com.br/sale/referr
 
 ***
 
-Agora que vimos todo o corpo documental do HTML, chegou a hora de aprender um pouco sobre as tags de texto, como, paragráfos, títulos, elementos semânticos, como inserir um link na página e muito mais. 😊
+Olá! Tudo bem? Espero que esteja. 
 
-Para começarmos, devo lembrar que as tags apresentadas agora serão inseridas na tag `body` , que foi mencionada em um commit anterior e está escrita na Issue "Descrevendo o documento HTML".
+Hoje veremos containers! 
 
-### Títulos
+Dando contexto:
 
-A primeira tag que será apresentada é a de títulos, elas são representadas pela letra "*h*" seguida de um número(vão de 1 a 6), o número representará o nível hierárquico(importância) do título dentro do conteúdo de uma página.
+Antigamente no HTML se utilizava a tag `div` para multiplos usos, ela continua sendo o principal container, porém para finz organizacionais se optou no HTML5 uma nova abordagem, dividindo melhor a página e seus agrupamentos.
 
-```
-<h1>Título h1</h1>
-<h2>Título h2</h2>
-<h3>Título h3</h3>
-<h4>Título h4</h4>
-<h5>Título h5</h5>
-<h6>Título h6</h6>
-```
-***
-
-### Paragráfos
-
-Para se inserir um paragráfo deve-se utilizar a tag `p`.
-
-```
-<p>
-    Olá Mundo
-</p>
-```
-
-*Obs:* Quando ainda não se tem o texto definido para página e se sente necessidade de uma visualização melhro de como ficará o documento pode ser utilizado o atributo `lorem`, ele cria um texto aleatório na página.
+Os containers servem como "_caixas de agurpamento_". São usados para organizar e agrupar elementos HTML, assim sendo essencial para aplicar o CSS de forma eficiente e controlada, o que permite aumentar o grau de complexidade(estetíca e de manupilação) da página. Tendo isso em mente, será apresentado agora alguns containers semânticos, eles se diferem da `div` por organizar melhor a página e suas funcionalidades.
 
 ***
 
-### Links
+### Tags `header` e `nav`
 
-A tag `a` é usada como "**_âncora_**" para se colocar atributos como por exemplo o `href` que é utilizado para links. Quando um usuário clica no texto ou no elemento contido na tag, o navegador o levará ao endereço especificado no `href`.
-
-```
-<a href="https://jpimg.com.br/uploads/2024/12/7-racas-de-gato-com-filhotes-muito-fofos.jpg" title="Gatinho cinza, clique!" target="_blank">Gatinho cinza</a>
-```
-
-Mais alguns atributos que são utilizados na tag `a`:
-
-  - **Para links internos: É possivel criar links internos para mesma página apartir do atributo `id`.**
+A tag `header` serve como um "_cabeçalho_", e é na onde se apresenta o conteúdo inícial da página. Seus elementos principais incluem: títulos, logotipos, slogans e o elemento `nav` para navegar na página.
 
 ```
-<p id="secao-contato">Entre em Contato</p>
-<p><a href="#secao-contato">Ir para Seção de Contato</a></p>
+    <header>
+        <h1>Meu primeiro container</h1>
+        <p>Na tag "header" foi escríto meu primeiro container!!!</p>
+        <nav>
+            <ul>
+                <li><a href="#artigos">Artigos</a></li>
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
+                <li><a href="#contatos">Contatos</a></li>
+                <li><a href="#nossa-hitoria">Nossa História</a></li>
+            </ul>
+        </nav>
+    </header>
 ```
 
-  - **Para Download de arquivos: Com o atributo `download`, o navegador identifica que é para baixar o arquivo de vez o abri-lo.**
-
-```
-<a href="documento.pdf" download>Baixar PDF</a>
-```
-
-
-  - **`target`: É o atributo que determina em qual página o link será aberto.**
-
-```
-<a href="https://lojapetmais.com.br/cdn/shop/articles/brinquedosgato.png?v=1714668761" target="_blank" title="Gatinho brincando com a bola!">Gatinho com a Bola</a>
-```
-
-
-  - **`rel`: Esse atributo é utilizado para descrever a relação da página com o link. os valores são `nofollow`(para não seguir o link), `noopener` e `noreferrer` almentam a segurança ao abrir links em uma nova aba/janela.**
-
-```
-<a href="https://fly.metroimg.com/upload/q_85,w_1200/https://uploads.metroimg.com/wp-content/uploads/2022/12/08154034/Gato-com-as-patas-levantadas.jpg" rel="nofollow noopener noreferrer" target="_blank">Gatinho</a>
-```
-
-
-- **links para e-mail, telefone e SMS**
-
-```
-<a href="mailto:nayaraabe02@gmail.com">Envie um e-mail</a><!--E-mail-->
-
-<br>
-
-<a href="tel:+5511930263687">Ligue para nós</a><!--Telefone-->
-
-<br>
-
-<a href="sms:+5511930263687?body=Olá">Enviar SMS</a><!--SMS-->
-```
-***
-
-### Negrito e itálico
-
-Bom, agora iremos ver as tags semânticas:
-
-Primeiramente temos a tag `b` que deixa uma palavra ou frase em negrito para fins somente **vizuais**.
-
-```
-<p>Tenho dois gatos <b>lindos</b></p>
-```
-
-E também temos a tag `strong` que tem como objetivo deixar o que estiver entre as tags de abertura e fechamento em negrito, porém com o intuito de ser **importante**. Ou seja, possuir contexto:
-
-```
-<p>Tenho dois gatos <strong>muito lindos</strong></p>
-```
-
-*Obs:* A tag `strong` impacta diretamente no SEO(mecânismo de busca) e na acessibilidade da página.
+`nav` é um container de navegação, podemos utilizar ele para pesquisar itens em uma página. Pode ser usado em outros containers como `section`, normalmente utiliza `ul` e `li`(que são listas ordenadas e não ordenadas) para criar listas para navegação mais simplificada na página. Além de ficar dentro da tag `body` o `header` pode ser incluido dentro do container `article` ou de uma `section` para ser um cabeçalho exclusivo daquele artigo ou seção.
 
 ***
 
-Para tag `i` segue o mesmo padrão, sendo somente para meios **vizuais**.
+### `main` , `section` , `article`
+
+`main` É a tag que contém o elemento **principal** da página, aqui se engloba as principais tags e elementos que realizam o comportamento do documento como um todo.
 
 ```
-<p>Ganhei um <i>perfume</i></p>
+    <main>
+        <article>
+            <header>
+                <h2>A arte</h2>
+                <p>Tema: Arte</p>
+            </header>
+            <p>A arte engloba arquitetura, cinema, dança, desenho, escultura, fotografia, literatura, música, pintura,
+                poesia...</p>
+        </article>
+     </main>
 ```
-
-Agora para tag `em`, ela deixará a frase em itálico com o objetivo de dar **enfase** na palavra ou frase:
-
-```
-<p>Ganhei um <em>perfume caro</em></p>
-```
-
-*Obs:* Para boas práticas é sempre bom utilizar somente as tags `strong` e `em` para uso semântico, já que as tags `b` e `i` são para efeitos visuais. Então recomendo que seja utilizado conforme normas do CSS, que foi criado para este uso afinal.
-
-***
-
-### Marcação (Marca texto)
-
-A tag `mark` serve como uma **marcação**, como um marca-texto grifando as palavras. Ela sinalizado elementos que tem **relevância imediata**, como em campo de pesquisa, atualização de conteudo, citações, entre outras.
+`section` é um container que divide o conteúdo em **seções**, por exemplo, pode se ter uma section para  "_artigos_", outra para "_sobre-nos_", outra para "_contatos_", etc.
 
 ```
-<p>Você pesquisou por <mark>sapatos</mark> nesta última semana</p>
+        <section id="artigos">
+            <h2>Últimos Artigos</h2>
+            <p>Confira os últimos artigos publicados recentemente<time datetime="2025-08-04T12:39:00"> 05/08/2025</time>
+            </p>
+        </section>
+```
+
+`article` este container é utilizado para conteúdos **independetes**, sendo o conteúdo principal para um contexto específico.
+
+```
+ <article>
+                <header>
+                    <h3>Prissão domiciliar</h3>
+                    <p>Referente à prisão domiciliar do ex-presidente Bolsonaro.</p>
+                </header>
+                <p>Carlos Bolsonaro passa mal e é internado após prisão domiciliar do pai.
+                    <br>
+                    Clique<a
+                        href="https://veja.abril.com.br/coluna/maquiavel/carlos-bolsonaro-passa-mal-e-e-internado-apos-prisao-domiciliar-do-pai/">
+                        aqui</a> para saber mais!
+                </p>
+ </article>
 ```
 
 ***
 
-### Rasura
+### `aside` e `footer`
 
-E também temos a tag `del` que risca a palavra deixando ela **rasurada**, assim tornando o conteúdo inválido ou representado que foi alterado.
 
-```
-<p>Para quem perguntou, estamos demitindo <del>todos</del> os funcionários</p>
-```
-
-Dentro da tag `del` podemos utilizar alguns atributos como o `cite` e o `datetime`. O `cite` realiza uma **citação** no que foi rasurado, colocando uma URL(não clicavel) para que seja visto o porque do coteúdo ter sido alterado ou deletado, comumente utilizado para mudar preços em promoções, alterações em documentos/artigos, itens que estão indisponíveis.-->
+`aside` o que está diretamente relacionado ao conteudo principal, normalmente "ao lado", como uma barra lateral.
 
 ```
-<p>
-  Este animal não é um <del cite="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/01-domesticated-dog.webp?w=760&h=507">Gato</del>, pois este é um cachorro!
-</p>
+                <aside>
+                    <h4>Sobre as notas do autor</h4>
+                    <p>Jair Messias Bolsonaro GOMM é um militar reformado e político brasileiro, atualmente filiado ao
+                        Partido Liberal.
+                        <br>
+                        Para saber mais sobre o ex-presidente brasileiro, acesse: <a
+                            href="https://pt.wikipedia.org/wiki/Jair_Bolsonaro">Wikipédia</a>
+                    </p>
+                </aside>
 ```
 
-Já o `datetime` indica a **data/ hora** que a tag `del` foi utilizada. Este atributo também serve para as tags `time` e `ins`.
+_Obs_: Na tag `aside` (ao lado) quem define de fato na onde o conteúdo será posissionado vai ser o CSS.
+
+`footer` é o container semântico que fica no **rodapé** da página indicando conteúdos, como, telefone de contato, email, endereço, autorização da página e afins.
 
 ```
-<p>Para o arquivo <del datetime="2025-07-18T12:23:00">182</del> não estamos correspondendo.</p>
-```
-
-***
-### tags `time` e `ins`
-Falando das outras duas tags. A tag `time` é usada para representar o conteúdo de data e hora sendo legivél por máquinas e humanos. Sendo de importância para que navegadores, ferramentas de busca ou outras aplicações possam entender e padronizar a data e hora.
-
-```
-<P> Você possui um evento no dia <time datetime="2025-07-20">20 de julho</time>.</P>
-```
-
-Agora a tag `ins` insere um texto, servindo principalmete para **atualizações**.
-
-```
-<p>Preço: R$<del datetime="2025-07-18">199,00</del> para R$<ins datetime="2025-07-19">99,00</ins></p>
-```
-
-***
-
-### `small`
-
-Temos também a tag `small` que serve para deixar a fonte do **texto menor**, esta tag pode representar direitos autorais, avisos legais, letras pequenas, notas de rodapé, ou atribuições.
-
-```
-<p>Menor, menor, MENOR, <small>menor</small>.</p>
-```
-
-***
-
-### `span`
-
-A tag `span` serve como um **coutainer** vazio para se estilizar com CSS e manupilar com JavaScript, sua utilização serve para elementos **inline**(que estão somente em uma linha).
-
-```
-<p>O ar é feito de uma molécula de <span style="color: aqua;">Hidrogênio</span> e  duas de <span style="color: grey;">Oxigênio</span>.</p>
-```
-
-*Obs:* Porque não usar `div`? Para boas pràticas sempre é bom utilizar a tag `span` para elementos inline, pois corresponde ao bom uso do HTML. As `div` são utilizadas para uma gama muito maior de conteúdo, abrangendo diversas tags.
-
-***
-
-### `blockquote`
-
-Para tag `blockquote` é onde se realiza uma **citação semântica**. Isso quer dizer que pode ser citado dentro da página algo que já foi escrito anteriormente, ou algo externo. Por exemplo, frases, falas, artigos, trechos de um texto, entre outros.
-
-```
-<h3>Frase do dia</h3>
-<blockquote cite="https://www.google.com/search?q=frase+do+dia&rlz=1C1ONGR_pt-PTBR1168BR1168&oq=frase+do+dia&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORixAxiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIGCAUQABgDMgcIBhAAGIAEMgcIBxAAGIAEMgcICBAAGIAEMgcICRAAGIAE0gEINDYzOWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8">
-    <p>"Acredite no seu potencial e transforme desafios em oportunidades. O sucesso é a soma de pequenos esforços repetidos dia após dia."</p>
-    <footer>
-        - Representado pela: <cite>IA Gemini, <time datetime="2025-07-24">24 de Julho de 2025</time></cite>
+    <footer id="#contatos">
+        <address>
+            Escrito por: <a href="mailto:nayaraabe02@gmail.com">Nayara Abe</a>
+            <br>
+            Visite-me em: <a href="https://github.com/abeNayara">Meu perfil no GitHub</a>
+            <br>
+            Rua ---, 123 - Cidade, Estado
+            <br>
+            CEP: 12345-678
+            <br>
+            Telefone: <a href="tel:+55 11 1234-5678">(XX) XXXX-XXXX</a>
+        </address>
+        <p>&copy; 2025 Meu Primeiro Site. Todos os direitos reservados.</p>
     </footer>
-</blockquote>
 ```
-
-Podemos observar o uso de outras tags e atributos dentro do uso da tag `blockquote`. A tag `footer` é utilizada para realizar uma mensão ao qual foi citadado, nome do autor, fonte, título da obra. E a tag `time` serve para datar corretamente a citação original, e o atibuto `datetime` serve para ser legivel a máquinas.
-
-***
-
-### `adress`
-
-Tag `adress` indica a representação de informações de contato. Como, nome do autor/ proprietário, endereço físico, endereço de e-mail, número de telefone e links. Normalmente sempre aparece dentro da tag "footer" por ser o "pé" da página.
+_Obs_: o container "footer" não pode estar diretamente dentro da tag "main", pois ela é um container reservado par ao conteúdo principal da página. Já o "footer" pode ser encontrado dentro de "body, "nav", "section" e "article".-->
 
 
-```
-<footer>
-    <address>
-        Escrito por: <a href="mailto:nayaraabe02@gmail.com">Nayara Abe</a>
-        <br>
-        Visite-me em: <a href="https://github.com/abeNayara">Meu perfil no GitHub</a>
-        <br>
-        Rua ---, 123 - Cidade, Estado
-        <br>
-        CEP: 12345-678
-        <br>
-        Telefone: <a href="tel:+55 11 1234-5678">(XX) XXXX-XXXX</a>
-    </address>
-    <p>&copy; 2025 Meu Primeiro Site. Todos os direitos reservados.</p>
-</footer>
-```
-***
-
-Essas são as principais tags semânticas que temos no HTML de inicio, são muito importantes e util para o aprendizado, espero ter conseguido absorver conhecimento e ter deixado claro aos demais 😃
+Essas são os cotainers semânticos que temos no HTML de inicio, são muito importantes e util para o aprendizado, espero ter conseguido absorver conhecimento e ter deixado claro aos demais 😃
