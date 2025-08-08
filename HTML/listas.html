@@ -1,0 +1,81 @@
+<!--Como fazemos uma lista? Bom falaremos de listas agora!-->
+<!--As listas no HTML são de extrema importancia para organizar a página e o conteúdo.
+Temos três tipos de listas principais:-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listas</title>
+</head>
+
+<body>
+    <header>
+        <h1>Listas</h1>
+    </header>
+
+    <main>
+        <!--Para começarmos, temos a lista não ordenada "ul" - Unordered List:
+    Esta lista se chama assim, pela ordem que os itens são listados não ter importancia. A lista inteira precisa estar dentro da tag "ul" e cada item colocado na lista deve estar dentro da tag "li" - list item.--->
+        <section>
+            <header>
+                <h2>Lista não ordenada:</h2>
+                <p>Lista de ingredientes:</p>
+            </header>
+            <ul>
+                <li>3 ovos</li>
+                <li>2 xícaras de farinha de trigo</li>
+                <li>1 e 1/2 xícaras de açúcar</li>
+                <li>1 xícara de leite</li>
+                <li>1/2 xícara de óleo</li>
+                <li>1 colher sde sopa de fermento em pó</li>
+                <li>1 colher de chá de essência de baunilha</li>
+                <li>1 pitada de sal</li>
+            </ul>
+        </section>
+
+        <!--Obs: O uso mais comum para esse tipo de lista são para menus de navegação, listas de funcionalidade e listas de compra.-->
+
+        <!--Agora Listas Ordenadas "ol" - Ordered List:
+    Como o nome já diz são listas que possuem ordem, onde possuim importancia na possição em que o item se encontra, podendo ser númerada por, números, letras e algaritimos romanos.Este tipo de lista e estruturado da seguinte forma. Tudo deve estar dentro da tag "ol" e cada item deve estas em "li".-->
+
+        <section>
+            <header>
+                <h2>Lista ordenada:</h2>
+                <p>Passo a passo de como fazer um bolo:</p>
+            </header>
+            <ol>
+                <li>Pré-aqueça o forno a 180°C. Unte e enfarinhe uma forma de bolo (aproximadamente 24cm de diâmetro).</li>
+                <li>Em uma tigela grande, bata os ovos, o açúcar e a essência de baunilha até obter um creme claro e fofo. Você pode usar uma batedeira ou um fouet (batedor de arame).</li>
+                <li>Adicione o óleo e o leite e misture bem.</li>
+                <li>Em outra tigela, peneire a farinha de trigo, o fermento em pó e o sal. Isso ajuda a deixar o bolo mais leve.</li>
+                <li>Adicione os ingredientes secos à mistura líquida, aos poucos, mexendo delicadamente com uma espátula ou fouet. Não misture demais, apenas até a farinha desaparecer.</li>
+                <li>Despeje a massa na forma preparada e leve ao forno pré-aquecido por cerca de 40 a 45 minutos.</li>
+                <li>Para saber se o bolo está pronto, faça o teste do palito: espete um palito no centro do bolo. Se ele sair limpo, o bolo está assado.</li>
+                <li>Retire do forno e deixe esfriar um pouco antes de desenformar.</li>
+            </ol>
+        </section>
+
+        <!--Obs: Esse tipo de lista é muito comum em receitas, intruções passo a passo, rankings.-->
+
+        <!--E também temos a lista de descrição "dl" - Description List:
+        Sendo uma lista de descrição, seu conteúdo agrupa itens relacionados(termos e condições). Conposta por suas tags complementares "dt" - Description Term e "dd" - Description Description-->
+
+        <section>
+            <h2>Glossário de Termos de Tecnologia</h2>
+            <p>Aqui você encontra uma lista de termos técnicos e suas definições.</p>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Linguagem de Marcação de Hipertexto, usada para criar a estrutura de páginas web.</dd>
+                <br>
+                <dt>CSS</dt>
+                <dd>Folhas de Estilo em Cascata. Usando para estilizar o visual e o layout de documentos web.</dd>
+                <br>
+                <dt>JavaScript</dt>
+                <dd>Linguagem de programação que permite adicionar interatividade e dinamismo a páginas web.</dd>
+            </dl>
+        </section>
+    </main>
+</body>
+</html>
