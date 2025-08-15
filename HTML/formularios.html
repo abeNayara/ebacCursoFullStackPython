@@ -1,0 +1,25 @@
+<!--Aqui veremos sobre Formulários!
+Os formulários são importantes pois permitem que o usuário intaja com a página, realizando pesquisas, enviem dados, efetuem compras, etc.
+Sendo countainers que agrupam diferentes tipos de campus de entrada(inputs) para coletar dados do usuário.-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <!--Como o principal objetivo é a coleta de dados, utilizamos a tag "form" e com ela alguns atributos para receber e enviar informações como em "method" que possue duas ações "GET" e "POST".-->
+    <header>
+        <h1>Formulários</h1>
+        <h1>Meu Blog</h1>
+        
+        <form action="/pesquisa-posts" method="GET">
+            <label for="campo-busca">Buscar no blog:</label>
+            <input type="text" id="campo-busca" name="busca">
+            <button type="submit">Pesquisar</button>
+        </form>
+    </header>    
+
+</body>
+</html>

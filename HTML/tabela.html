@@ -3,11 +3,13 @@ OBS: Utilizamos tabelas somente para o uso tabular, e não para se criar layout 
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tabela</title>
 </head>
+
 <body>
     <header>
         <h1>Tabela</h1>
@@ -22,52 +24,45 @@ OBS: Utilizamos tabelas somente para o uso tabular, e não para se criar layout 
             <thead>
                 <!--Para criarmos uma linha na tabela utiliza "tr" - table row-->
                 <tr>
-                <!--E para criar uma célula de título/cabeçalho a tag "th" deve ser utilizada.-->
-                <th>Nome</th>
-                <th>Idade</th>
-                <th>Gênero</th>
-                <th>Raça</th>
-                <th>Cor</th>
-            </tr>
+                    <!--E para criar uma célula de título/cabeçalho a tag "th" deve ser utilizada.-->
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Gênero</th>
+                    <th>Raça</th>
+                    <th>Cor</th>
+                </tr>
             </thead>
             <!--"tbody" por sua vez agrupo o conteúdo principal da tabela.-->
             <tbody>
                 <tr>
-                <!--"td" - table data, define uma célula com dados comuns/complementares.-->
-                <td>Lola</td>
-                <td>2 anos</td>
-                <td>Fêmea</td>
-                <td>Cachorro, Labrador</td>
-                <td>Caramelo</td>
-            </tr>
-            <tr>
-                <td>Richard II</td>
-                <td>15 anos</td>
-                <td>Peixe água doce, Macho</td>
-                <td>Pintado</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>Tônia</td>
-                <td>3 meses</td>
-                <td>Fêmea</td>
-                <td>Cachorro, Shih Tzu</td>
-                <td>Dourado com mmáscara preta</td>
-            </tr>
-            <tr>
-                <td>Mei</td>
-                <td>5 anos</td>
-                <td>Fêmea</td>
-                <td>Gato, RND</td>
-                <td>Branco</td>
-            </tr>
-            <tr>
-                <td>Gutan</td>
-                <td>1 ano</td>
-                <td>Macho</td>
-                <td>Porquinho da Índia</td>
-                <td>Marrom</td>
-            </tr>
+                    <!--"td" - table data, define uma célula com dados comuns/complementares.-->
+                    <td>Lola</td>
+                    <td>2 anos</td>
+                    <td>Fêmea</td>
+                    <td>Cachorro</td>
+                    <td>Caramelo</td>
+                </tr>
+                <tr>
+                    <td>Tônia</td>
+                    <td>3 meses</td>
+                    <td>Fêmea</td>
+                    <td>Cachorro</td>
+                    <td>Dourado</td>
+                </tr>
+                <tr>
+                    <td>Mei</td>
+                    <td>5 anos</td>
+                    <td>Fêmea</td>
+                    <td>Gato</td>
+                    <td>Branco</td>
+                </tr>
+                <tr>
+                    <td>Gutan</td>
+                    <td>1 ano</td>
+                    <td>Macho</td>
+                    <td>Porquinho</td>
+                    <td>Marrom</td>
+                </tr>
             </tbody>
             <!--A tag "tfoot" agrupa o conteúdo do rodapé da tabela, usado principalmente para resumos e totais.-->
             <tfoot>
@@ -77,8 +72,48 @@ OBS: Utilizamos tabelas somente para o uso tabular, e não para se criar layout 
                 </tr>
             </tfoot>
         </table>
+        <hr>
+        <table>
+            <thead>
+                <caption>Tabela Marcas</caption>
+                <tr>
+                    <th>Código</th>
+                    <th>Descrição</th>
+                    <th>Marca</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+
+            <tr>
+                <td>830.0004</td>
+                <td>ASA GIRATORIA MED.ALCANCE P/MICROASPESOR</td>
+                <td>Naadanjain</td>
+                <td>R$0,24</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>0133-3</td>
+                <td>NEBULIZADOR NA 1 C/ GRAPA</td>
+                <td>Agrojet</td>
+                <td>R$44,81</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>7004</td>
+                <td>FINAL DE LINHA 13 MM</td>
+                <td>Implebras</td>
+                <td>R$2,00</td>
+                <td>10</td>
+            </tr>
+            <tfoot>
+                <td colspan="3">Total do preco de compra:</td>
+                <td>R$268,05</td>
+            </tfoot>
+        </table>
         <!--OBS: O uso das tags "thead", "tbody" e "tfoot" são muiuto bem vistas e se aplicam as boas maneiras de utilizar o HTML.-->
     </main>
     <!--Esse foi o estudo sobre tabelas! Sei que sem um layout visual parece bem descontruida, porém veremos CSS em breve!-->
 </body>
+
 </html>
