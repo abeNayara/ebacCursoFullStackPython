@@ -3,23 +3,65 @@ Os formulários são importantes pois permitem que o usuário intaja com a pági
 Sendo countainers que agrupam diferentes tipos de campus de entrada(inputs) para coletar dados do usuário.-->
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulários</title>
 </head>
+
 <body>
-    <!--Como o principal objetivo é a coleta de dados, utilizamos a tag "form" e com ela alguns atributos para receber e enviar informações como em "method" que possue duas ações "GET" e "POST".-->
+    <!--Como o principal objetivo é a coleta de dados, utilizamos a tag "form" e com ela alguns atributos para receber e enviar informações como em "method" que possue duas ações "GET" e "POST".
+    O uso do "POST" é relacionado ao "puxar" os dados informados pelo usuario e realizar uma ação com eles, por exemplo um cadastro, sendo dados **sensíveis**. Já o "GET" realiza o contrario, funcionando principalmente como um mecânismo de busca na página, assim puxando os dados(normais) que já são existentes na página.-->
+    <!--E também temos a tag "action" que "linka" uma URL para que as informações sejam enviadas para um armazenamento, onde os dados da página ficaram, podendo ser atualizados ou receberem informações do usuário.-->
+
     <header>
-        <h1>Formulários</h1>
-        <h1>Meu Blog</h1>
-        
+        <h1>Vendas</h1>
+        <!--Aqui temos um "action" que está com a URL de "/pesquisa-post" e utilizando o "method" em "GET", ou seja realizando uma pesquisa.-->
         <form action="/pesquisa-posts" method="GET">
-            <label for="campo-busca">Buscar no blog:</label>
+
+            <!--"label" e "input"
+        O par de tags sempre andam juntos para melhorar a pratica semantica e utilitaria da página, a tag "label" - rótulo, é usada para rotular o campo de texto criado pela tag "input" que possui vários atributos(exp: "text", "submit", "email"...) para melhorar a compreeenção do navegador sobre o que é aquele campo de texto.
+        
+        Aqui vemos que o "label" se conecta com o "input" atravez do "for" e "id", permitindo que um leitor de tela entenda que o texto "O que procura?" está ligado ao campo de texto do "input".-->
+            <label for="campo-busca">O que procura?</label>
+            <!--Dentro do "input" podemos ver que além dos atributos "type" e "id" temos o "name". Este atributo é um identificador, que é utlizado pelo servidor para o armazenamento dados que usuario inseriu na página, onde é identificado pela condição nome-valor.-->
             <input type="text" id="campo-busca" name="busca">
+            <!--Aqui a tag "button" tem a função de enviar os dados que o usuario informa atravez de "pesquisar", fazendo o servidor realizar o armazemaneto ou o envio dos dados.-->
             <button type="submit">Pesquisar</button>
         </form>
-    </header>    
 
+    </header>
+
+    <main>
+        <h2>Bem-vindo!</h2>
+        <p>Aqui você encontra os últimos artigos...</p>
+    </main>
+
+    <hr>
+
+    <section>
+        <h2>Entre em Contato</h2>
+        <form action="/enviar-contato" method="POST">
+            <label for="nome-contato">Seu Nome:</label>
+            <input type="text" id="nome-contato" name="nome">
+
+            <br><br>
+
+            <label for="email-contato">Seu E-mail:</label>
+            <input type="email" id="email-contato" name="email">
+
+            <br><br>
+
+            <label for="mensagem-contato">Sua Mensagem:</label>
+            <br>
+            <textarea id="mensagem-contato" name="mensagem" rows="5"></textarea>
+
+            <br><br>
+
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </section>
 </body>
+
 </html>
