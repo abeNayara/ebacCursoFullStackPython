@@ -22,24 +22,52 @@ Sendo countainers que agrupam diferentes tipos de campus de entrada(inputs) para
 
             <!--"label" e "input"
         O par de tags sempre andam juntos para melhorar a pratica semantica e utilitaria da página, a tag "label" - rótulo, é usada para rotular o campo de texto criado pela tag "input" que possui vários atributos(exp: "text", "submit", "email"...) para melhorar a compreeenção do navegador sobre o que é aquele campo de texto.
-        
         Aqui vemos que o "label" se conecta com o "input" atravez do "for" e "id", permitindo que um leitor de tela entenda que o texto "O que procura?" está ligado ao campo de texto do "input".-->
+         <!--Dentro do "input" podemos ver que além dos atributos "type" e "id" temos o "name". Este atributo é um identificador, que é utlizado pelo servidor para o armazenamento dados que usuario inseriu na página, onde é identificado pela condição nome-valor.-->    
             <label for="campo-busca">O que procura?</label>
-            <!--Dentro do "input" podemos ver que além dos atributos "type" e "id" temos o "name". Este atributo é um identificador, que é utlizado pelo servidor para o armazenamento dados que usuario inseriu na página, onde é identificado pela condição nome-valor.-->
             <input type="text" id="campo-busca" name="busca">
             <!--Aqui a tag "button" tem a função de enviar os dados que o usuario informa atravez de "pesquisar", fazendo o servidor realizar o armazemaneto ou o envio dos dados.-->
             <button type="submit">Pesquisar</button>
         </form>
-
     </header>
 
     <main>
-        <h2>Bem-vindo!</h2>
+            <h2>Bem-vindo!</h2>
         <p>Aqui você encontra os últimos artigos...</p>
+        <section>
+            <article>
+                <header>
+                    <h3>Descrevendo o documento HTML</h3>
+                    <p>Aqui vamos ver como um documento HTML é formado.</p>
+                </header>
+                <p>Aqui se começa toda a estrutura do HTML, indicando que começaremos um documento no formato de HTML. E que ele conversará com o navegador de forma sincrona...
+                <br>
+                Para saber mais dobre o documento HTML, clique <a href="https://github.com/abeNayara/ebacCursoFullStackPython/issues/1">aqui</a> e descubra tudo sobre o documento.
+                </p>
+                <aside>
+                    <h4>Sobre HTML</h4>
+                    <p>Para saber mais sobre o HTML de forma mais didatica e gratuita temos disponivel no Youtube o curso de HTML5 do tão amado professor Gustavo Guanabara, acesse <a href="https://youtu.be/Ejkb_YpuHWs?si=4lW1-pDAiQ0gvHPX">Curso em Vídeo</a> para se informar mais sobre o conteudo.</p>
+                </aside>
+            </article>
+            <article>
+                <header>
+                    <h3>Adicionando semantica em HTML</h3>
+                    <p>Agora que vimos todo o corpo documental do HTML, chegou a hora de aprender um pouco sobre as tags de texto, como, paragráfos, títulos, elementos semânticos, como inserir um link na página e muito mais.</p>
+                </header>
+                <p>Para começarmos, devo lembrar que as tags apresentadas agora serão inseridas na tag body , que foi mencionada em um commit anterior e está escrita na Issue "Descrevendo o documento HTML"....
+                <br>
+                Para saber mais sobre a semanticântica utilizada em HTML, clique <a href="https://github.com/abeNayara/ebacCursoFullStackPython/issues/3">aqui</a> e descubra mais sobre.
+                </p>
+                <aside>
+                    <h4>Sobre semântica HTML</h4>
+                    <p>Para saber mais sobre o HTML de forma mais didatica e gratuita temos disponivel no Youtube o curso de HTML5 do tão amado professor Gustavo Guanabara, acesse <a href="https://youtu.be/Ejkb_YpuHWs?si=4lW1-pDAiQ0gvHPX">Curso em Vídeo</a> para se informar mais sobre o conteudo.</p>
+                </aside>
+            </article>
+        </section>
     </main>
 
     <hr>
-
+    
     <section>
         <h2>Entre em Contato</h2>
         <form action="/enviar-contato" method="POST">
